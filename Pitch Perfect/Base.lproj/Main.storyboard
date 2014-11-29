@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Recording-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="nmq-pl-3pc"/>
+                    <navigationItem key="navigationItem" title="Recording" id="nmq-pl-3pc"/>
                     <connections>
                         <outlet property="recordButton" destination="MkY-M5-d54" id="cyN-MA-WT4"/>
                         <outlet property="recordingInProgress" destination="XlD-Rn-evs" id="AkJ-5X-BBP"/>
