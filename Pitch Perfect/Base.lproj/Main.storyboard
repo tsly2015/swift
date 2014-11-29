@@ -61,12 +61,12 @@
                                 <exclude reference="ByE-qL-foK"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="J4M-Rz-Cka"/>
-                                <exclude reference="a5r-FR-N0w"/>
                                 <exclude reference="dqf-74-Vck"/>
                                 <exclude reference="g9V-H5-OLy"/>
                                 <exclude reference="QX3-cS-l0F"/>
                                 <exclude reference="vPZ-QG-0Sg"/>
+                                <exclude reference="J4M-Rz-Cka"/>
+                                <exclude reference="a5r-FR-N0w"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -76,17 +76,18 @@
                                 <include reference="ByE-qL-foK"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="J4M-Rz-Cka"/>
-                                <include reference="a5r-FR-N0w"/>
                                 <include reference="dqf-74-Vck"/>
                                 <include reference="g9V-H5-OLy"/>
                                 <include reference="QX3-cS-l0F"/>
                                 <include reference="vPZ-QG-0Sg"/>
+                                <include reference="J4M-Rz-Cka"/>
+                                <include reference="a5r-FR-N0w"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="recordingInProgress" destination="XlD-Rn-evs" id="AkJ-5X-BBP"/>
+                        <outlet property="stopButton" destination="ByE-qL-foK" id="GfQ-pq-5ZC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
