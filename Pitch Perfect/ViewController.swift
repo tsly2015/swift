@@ -29,5 +29,8 @@ class ViewController: UIViewController {
         println("in recording")
     }
 
+    @IBAction func stopAudio(sender: UIButton) {
+        recordingInProgress.hidden = true
+    }
 }
 
