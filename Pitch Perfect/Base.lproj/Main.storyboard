@@ -38,6 +38,7 @@
                                 </state>
                                 <connections>
                                     <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="582-4K-wDH"/>
+                                    <segue destination="SoT-Us-Z8c" kind="show" id="6ba-m5-C5V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,6 +96,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1126.5" y="136"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lb8-3e-D1n">
+            <objects>
+                <viewController id="SoT-Us-Z8c" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P9f-Gj-5xT"/>
+                        <viewControllerLayoutGuide type="bottom" id="1qO-Td-Apl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e7e-w0-6ME">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oay-e4-fcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101.5" y="136"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pjh-fx-5CF">
