@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oBA-tO-Kn6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Recording-->
@@ -108,7 +109,40 @@
                     <view key="view" contentMode="scaleToFill" id="e7e-w0-6ME">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aY2-zH-48x">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="slowButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSlowAudio:" destination="SoT-Us-Z8c" eventType="touchUpInside" id="HYd-iw-wPs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aY2-zH-48x" firstAttribute="leading" secondItem="e7e-w0-6ME" secondAttribute="leadingMargin" constant="30" id="aBa-kh-J3m"/>
+                            <constraint firstItem="aY2-zH-48x" firstAttribute="top" secondItem="P9f-Gj-5xT" secondAttribute="bottom" constant="50" id="pRV-Fj-SLh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="aY2-zH-48x"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="aBa-kh-J3m"/>
+                                <exclude reference="pRV-Fj-SLh"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="aY2-zH-48x"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="aBa-kh-J3m"/>
+                                <include reference="pRV-Fj-SLh"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oay-e4-fcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,6 +170,7 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="slowButton" width="100" height="100"/>
         <image name="stopButton" width="50" height="50"/>
     </resources>
 </document>
