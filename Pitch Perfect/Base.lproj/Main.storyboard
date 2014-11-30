@@ -119,28 +119,45 @@
                                     <action selector="playSlowAudio:" destination="SoT-Us-Z8c" eventType="touchUpInside" id="HYd-iw-wPs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npr-Pz-pkQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="fastButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playFastAudio:" destination="SoT-Us-Z8c" eventType="touchUpInside" id="xtr-eI-Jdh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Npr-Pz-pkQ" firstAttribute="top" secondItem="P9f-Gj-5xT" secondAttribute="bottom" constant="50" id="Kio-1k-U1o"/>
                             <constraint firstItem="aY2-zH-48x" firstAttribute="leading" secondItem="e7e-w0-6ME" secondAttribute="leadingMargin" constant="30" id="aBa-kh-J3m"/>
                             <constraint firstItem="aY2-zH-48x" firstAttribute="top" secondItem="P9f-Gj-5xT" secondAttribute="bottom" constant="50" id="pRV-Fj-SLh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Npr-Pz-pkQ" secondAttribute="trailing" constant="30" id="zpB-Z2-0uU"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="aY2-zH-48x"/>
+                                <exclude reference="Npr-Pz-pkQ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="aBa-kh-J3m"/>
                                 <exclude reference="pRV-Fj-SLh"/>
+                                <exclude reference="Kio-1k-U1o"/>
+                                <exclude reference="zpB-Z2-0uU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="aY2-zH-48x"/>
+                                <include reference="Npr-Pz-pkQ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="aBa-kh-J3m"/>
                                 <include reference="pRV-Fj-SLh"/>
+                                <include reference="Kio-1k-U1o"/>
+                                <include reference="zpB-Z2-0uU"/>
                             </mask>
                         </variation>
                     </view>
@@ -169,6 +186,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fastButton" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowButton" width="100" height="100"/>
         <image name="stopButton" width="50" height="50"/>

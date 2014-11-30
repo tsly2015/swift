@@ -43,6 +43,11 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.play()
     }
 
+    @IBAction func playFastAudio(sender: UIButton) {
+        audioPlayer.stop()
+        audioPlayer.rate = 2
+        audioPlayer.play()
+    }
     /*
     // MARK: - Navigation
 
