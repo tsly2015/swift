@@ -23,6 +23,7 @@ class PlaySoundsViewController: UIViewController {
             // Another way, directly returns NSURL
             // NSBundle.mainBundle().URLForResource("movie_quote", withExtension: "mp3")
             audioPlayer = AVAudioPlayer(contentsOfURL: filePathUrl, error: nil)
+            audioPlayer.enableRate = true
         }
         else
         {
@@ -37,6 +38,8 @@ class PlaySoundsViewController: UIViewController {
     
 
     @IBAction func playSlowAudio(sender: UIButton) {
+        audioPlayer.stop()
+        audioPlayer.rate = 0.5
         audioPlayer.play()
     }
 
