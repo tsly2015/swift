@@ -138,10 +138,21 @@
                                     <action selector="stopAudio:" destination="SoT-Us-Z8c" eventType="touchUpInside" id="qZB-GM-cUb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzC-bn-Nqt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunkButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="SoT-Us-Z8c" eventType="touchUpInside" id="YpW-5c-Jyr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XzC-bn-Nqt" firstAttribute="leading" secondItem="e7e-w0-6ME" secondAttribute="leadingMargin" constant="30" id="Cbt-Yc-p2N"/>
                             <constraint firstItem="Npr-Pz-pkQ" firstAttribute="top" secondItem="P9f-Gj-5xT" secondAttribute="bottom" constant="50" id="Kio-1k-U1o"/>
+                            <constraint firstItem="XzC-bn-Nqt" firstAttribute="top" secondItem="aY2-zH-48x" secondAttribute="bottom" constant="70" id="Zbx-1F-nTZ"/>
                             <constraint firstItem="aY2-zH-48x" firstAttribute="leading" secondItem="e7e-w0-6ME" secondAttribute="leadingMargin" constant="30" id="aBa-kh-J3m"/>
                             <constraint firstAttribute="centerX" secondItem="gQ0-dJ-b5K" secondAttribute="centerX" id="giY-2C-wt8"/>
                             <constraint firstItem="aY2-zH-48x" firstAttribute="top" secondItem="P9f-Gj-5xT" secondAttribute="bottom" constant="50" id="pRV-Fj-SLh"/>
@@ -153,14 +164,17 @@
                                 <exclude reference="aY2-zH-48x"/>
                                 <exclude reference="Npr-Pz-pkQ"/>
                                 <exclude reference="gQ0-dJ-b5K"/>
+                                <exclude reference="XzC-bn-Nqt"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="vg4-Iy-Mx0"/>
-                                <exclude reference="Kio-1k-U1o"/>
-                                <exclude reference="zpB-Z2-0uU"/>
                                 <exclude reference="aBa-kh-J3m"/>
                                 <exclude reference="pRV-Fj-SLh"/>
+                                <exclude reference="Kio-1k-U1o"/>
+                                <exclude reference="zpB-Z2-0uU"/>
+                                <exclude reference="Cbt-Yc-p2N"/>
+                                <exclude reference="Zbx-1F-nTZ"/>
                                 <exclude reference="giY-2C-wt8"/>
+                                <exclude reference="vg4-Iy-Mx0"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -168,14 +182,17 @@
                                 <include reference="aY2-zH-48x"/>
                                 <include reference="Npr-Pz-pkQ"/>
                                 <include reference="gQ0-dJ-b5K"/>
+                                <include reference="XzC-bn-Nqt"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="vg4-Iy-Mx0"/>
-                                <include reference="Kio-1k-U1o"/>
-                                <include reference="zpB-Z2-0uU"/>
                                 <include reference="aBa-kh-J3m"/>
                                 <include reference="pRV-Fj-SLh"/>
+                                <include reference="Kio-1k-U1o"/>
+                                <include reference="zpB-Z2-0uU"/>
+                                <include reference="Cbt-Yc-p2N"/>
+                                <include reference="Zbx-1F-nTZ"/>
                                 <include reference="giY-2C-wt8"/>
+                                <include reference="vg4-Iy-Mx0"/>
                             </mask>
                         </variation>
                     </view>
@@ -204,6 +221,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunkButton" width="100" height="100"/>
         <image name="fastButton" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowButton" width="100" height="100"/>
