@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RecordSoundsViewController: UIViewController {
     // Four places to change names:
@@ -15,6 +16,8 @@ class RecordSoundsViewController: UIViewController {
     @IBOutlet weak var recordingInProgress: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
+
+    var audioRecorder:AVAudioRecorder!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,14 +37,35 @@ class RecordSoundsViewController: UIViewController {
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
         stopButton.hidden = false
-        //Show text "recording in progress"
+        // Show text "recording in progress"
         recordingInProgress.hidden = false
-        //TODO: Record the user's voice
+        // Record the user's voice
+        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        var currentDateTime = NSDate()
+        var formatter = NSDateFormatter()
+        formatter.dateFormat = "ddMMyyyy-HHmmss"
+        var recordingName = formatter.stringFromDate(currentDateTime)+".wav"
+        var pathArray = [dirPath, recordingName]
+        let filePath = NSURL.fileURLWithPathComponents(pathArray)
+        println(filePath)
+
+        var session = AVAudioSession.sharedInstance()
+        session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
+
+        audioRecorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
+        audioRecorder.meteringEnabled = true
+        audioRecorder.prepareToRecord()
+        audioRecorder.record()
+
         println("in recording")
     }
 
     @IBAction func stopAudio(sender: UIButton) {
         recordingInProgress.hidden = true
+
+        audioRecorder.stop()
+        var audioSession = AVAudioSession.sharedInstance()
+        audioSession.setActive(false, error: nil)
     }
 }
 
